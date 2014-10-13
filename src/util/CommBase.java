@@ -3,20 +3,20 @@ Cours : LOG121
 Session : A2014
 Groupe : 01
 Projet : Laboratoire #1
-Étudiant : Mario Morra
+ï¿½tudiant : Mario Morra
 Code(s) perm. : MORM07039202 (AM54710)
 Professeur : Ghizlane El boussaidi
-Chargés de labo : Alvine Boaye Belle et Michel Gagnon
+Chargï¿½s de labo : Alvine Boaye Belle et Michel Gagnon
 Nom du fichier : CommBase.java
-Date créé : 2014-09-20
+Date crï¿½ï¿½ : 2014-09-20
 Date dern. modif. 2014-09-20
 *******************************************************
 Historique des modifications
 *******************************************************
 2014-09-20 Version initiale
 2014-09-26 Boucle while
-2014-10-02 Ajustement dans la méthode de connection
-           Ajout des méthodes connect() et disconnect()
+2014-10-02 Ajustement dans la mï¿½thode de connection
+           Ajout des mï¿½thodes connect() et disconnect()
 *******************************************************/
 
 package util;
@@ -111,11 +111,13 @@ public class CommBase {
 						in.nextLine();
 						messageRecu = in.nextLine();
 					
-						Forme nouvelleForme = CreateurFormes.creerForme(messageRecu);
-						FenetrePrincipale.fenetreFormes.ajouterForme(nouvelleForme);
-						
-						if(listener!=null){
-							firePropertyChange("ENVOIE-TEST", null, (Object) ".");
+						for(int i=0, i<10, i++){
+							Forme nouvelleForme = CreateurFormes.creerForme(messageRecu);
+							FenetrePrincipale.fenetreFormes.ajouterForme(nouvelleForme);
+							
+							if(listener!=null){
+								firePropertyChange("ENVOIE-TEST", null, (Object) ".");
+							}
 						}
 					}
 					catch(Exception ex){
